@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 // set the static path inside angular's distribution folder
-app.use(express.static(path.join(__dirname, '/client/dist/client')));
+app.use(express.static(path.join(__dirname, '/angular/dist/angular')));
 
 router(app);
 
