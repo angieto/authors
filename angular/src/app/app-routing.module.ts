@@ -5,8 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: '/' },
-    { path: '/', component: HomeComponent },
+    { path: '', component: HomeComponent },
     { path: 'new', component: CreateComponent },
     { path: 'edit/:id', component: EditComponent },
     { path: "**", redirectTo: '/' }

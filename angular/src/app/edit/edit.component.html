@@ -1,3 +1,9 @@
 <div class="container">
-    
+    <h2>Favorite Authors</h2>
+    <a [routerLink]="[ '/' ]">Home</a>
+    <p>Edit this author</p>
+    <form (submit)="updateAuthor()">
+        <input type="text" placeholder="{{ selectedAuthor['name'] }}" name="updatedAuthor.name" [(ngModel)]="updatedAuthor.name">
+        <button type="submit">Submit</button>
+    </form>
 </div>

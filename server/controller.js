@@ -14,7 +14,7 @@ module.exports = {
     updateAuthor: (req, res) => Author.findByIdAndUpdate(req.params.id, req.body)
                                       .then(author => console.log("Backend updated author", author)||res.json(author))
                                       .catch(err => console.log("Backend error", err)||res.json(err)),
-    deleteAuthor: (req, res) => Author.removeById(req.params.id)
+    deleteAuthor: (req, res) => Author.findByIdAndRemove(req.params.id)
                                       .then(author => console.log("Backend removed author", author))
                                       .catch(err => console.log("Backend error", err)||res.json(err))
 }

@@ -1,3 +1,8 @@
 <div class="container">
-    
+    <h2>Favorite Authors</h2>
+    <a [routerLink]="[ '/' ]">Home</a>
+    <form (submit)="createAuthor()">
+        <input type="text" placeholder="Author" name="newAuthor.name" [(ngModel)]="newAuthor.name">
+        <button type="submit">Submit</button>
+    </form>
 </div>
